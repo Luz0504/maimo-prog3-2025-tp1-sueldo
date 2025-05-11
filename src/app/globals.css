@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #000000;
 }
 
 @theme inline {
@@ -10,11 +10,13 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-lobster: var(--font-lobster);
+  --font-oswald: var(--font-oswald);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f5b6b6;
     --foreground: #ededed;
   }
 }
@@ -23,4 +25,100 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+img {
+  border-radius: 2em;
+}
+
+a {
+  padding: 0em 0.5em;
+}
+
+h1 {
+  font-size: 2em;
+  color: #720e3c;
+  padding: 1em 0em;
+  text-align: center;
+  font-family: var(--font-lobster);
+  font-weight: 400;
+}
+
+.container {
+  color: #b3135e;
+  background-color: #ededed;
+  max-width: 100%;
+  height: 5em;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0em 5em;
+  font-size: 1.2em;
+}
+
+.container ul {
+  display: flex;
+  justify-content: end;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ededed;
+  color: #0a0a0a;
+  height: 9vh;
+  justify-content: center;
+
+}
+
+.home-cont {
+  height: fit-content;
+  padding: 0em 0em 3em;
+}
+
+.recipes-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.recipe-card {
+  font-size: 1.4em;
+  padding: 1em;
+  border-radius: 2em;
+  color: #0a0a0a;
+  grid-column: span 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #ff9a9a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 6px rgba(233, 54, 164, 0.2);
+  font-family: var(--font-oswald);
+  gap: 0.6em;
+}
+
+.button-cont {
+  margin: 0.1em 0em 0em;
+  height: 3em;
+  width: 6em;
+  border: solid;
+  border-color: #720e3c;
+  border-radius: 3em;
+  background-color: #ffffff;
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s ease;
+}
+
+.button-cont:hover {
+  background-color: #720e3c;
+  color: #ffffff;
 }
