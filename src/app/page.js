@@ -1,6 +1,7 @@
 import Navbar from "@/app/components/Navbar"
 import Footer from "@/app/components/Footer"
 import HomeContainer from "@/app/components/HomeContainer";
+import Image from "next/image";
 
 export default function Home() {
 
@@ -9,7 +10,15 @@ export default function Home() {
   return (
     <div>
       <div>
-        <h1> {title}</h1>
+        <div className="bannerCont"> 
+                <Image 
+                  src= "/assets/bannerPusheen.gif"
+                  width={90}
+                  height={90}
+                  alt="Pusheen"
+                />
+                <h1> {title}</h1>
+        </div>
         <Navbar/>
         <HomeContainer/>
         <Footer/>

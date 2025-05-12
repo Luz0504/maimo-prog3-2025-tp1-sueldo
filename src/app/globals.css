@@ -16,7 +16,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #f5b6b6;
+    --background: #a57548;
     --foreground: #ededed;
   }
 }
@@ -33,15 +33,32 @@ img {
 
 a {
   padding: 0em 0.5em;
+  font-family: var(--font-oswald);
+  transition: 150ms;
+}
+
+a:hover {
+  color: #ff775f;
+  text-decoration: underline;
 }
 
 h1 {
   font-size: 2em;
-  color: #720e3c;
+  color: #ffffff;
   padding: 1em 0em;
   text-align: center;
   font-family: var(--font-lobster);
   font-weight: 400;
+}
+
+.bannerCont {
+    background-color: #75452f;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -69,7 +86,7 @@ h1 {
   color: #0a0a0a;
   height: 9vh;
   justify-content: center;
-
+  font-family: var(--font-oswald);
 }
 
 .home-cont {
@@ -79,33 +96,36 @@ h1 {
 
 .recipes-grid {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  gap: 30px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2em;
   max-width: 1200px;
   margin: 0 auto;
 }
 
 .recipe-card {
-  font-size: 1.4em;
-  padding: 1em;
-  border-radius: 2em;
-  color: #0a0a0a;
-  grid-column: span 4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background-color: #ff9a9a;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 4px 6px rgba(233, 54, 164, 0.2);
-  font-family: var(--font-oswald);
-  gap: 0.6em;
+    color: #0a0a0a;
+    font-family: var(--font-oswald);
+    text-align: center;
+    background-color: #ffd7a3;
+    border-radius: 2em;
+    flex-flow: column wrap;
+    align-content: center;
+    align-items: center;
+    gap: .7em;
+    width: 13em;
+    padding: 1em;
+    font-size: 1.3em;
+    transition: transform .3s, box-shadow .3s;
+    display: flex;
+    box-shadow: 0 4px 6px #2e0c094d;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .button-cont {
-  margin: 0.1em 0em 0em;
-  height: 3em;
-  width: 6em;
+  height: fit-content;
+  width: 10em;
   border: solid;
   border-color: #720e3c;
   border-radius: 3em;
@@ -116,9 +136,15 @@ h1 {
   justify-content: center;
   align-items: center;
   transition: 0.3s ease;
+  font-size: 20;
 }
 
 .button-cont:hover {
   background-color: #720e3c;
   color: #ffffff;
+}
+
+.button-cont a:hover {
+  color: white;
+  text-decoration: none;
 }

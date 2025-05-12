@@ -5,7 +5,7 @@ const Footer = () => { //rafce
           Copyright UMAI 2025
         </div>
         <div>
-
+ 
         </div>
     </div>
   )
