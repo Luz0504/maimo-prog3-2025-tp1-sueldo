@@ -1,18 +1,29 @@
-const Navbar = ({title, year}) => {
+import Image from "next/image";
+import Link from "next/link";
+
+const Navbar = () => {
 
     return (
-        <div className="container">
-            <div>{title} {year}</div>
+        <div className="nav-container">
+            <div className="logo">
+                <Image 
+                    src= "/assets/Stardrop.png"
+                    width={100}
+                    height={100}
+                    alt="StardropSaloon"
+                />
+                <h2>El salón de la estrella</h2>
+            </div>
             <nav>
                 <ul>
                     <li>
-                        <a href="#">Home</a>
+                        <Link href={'/'}>Home</Link>
                     </li>
                     <li>
-                        <a href="#">About</a>
+                        <Link href={''}>About</Link>
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <Link href={''}>Contact</Link>
                     </li>
                 </ul>
             </nav>

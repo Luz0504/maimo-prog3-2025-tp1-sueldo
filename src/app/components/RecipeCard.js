@@ -1,17 +1,19 @@
 import Image from "next/image";
-import Button from "@/app/components/Button";
+import Link from 'next/link';
 
-const RecipeCard = ({name, image}) => {
+const RecipeCard = ({id, name, image}) => {
   return (
     <div className='recipe-card'>
-          <a href="#"><Image 
+          <Image 
           src={image}
           width={220}
           height={200}
           alt={name}
-          /></a>
+          />
           <h2>{name}</h2>
-          <Button />
+          <Link href={`/recipe/${id}`}>
+            Ver Más
+          </Link>
     </div>
   );
 };

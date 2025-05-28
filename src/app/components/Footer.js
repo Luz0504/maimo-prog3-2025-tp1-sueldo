@@ -1,8 +1,8 @@
-const Footer = () => { //rafce
+const Footer = () => {
   return (
     <div className="footer-container">
         <div>
-          Copyright UMAI 2025
+          Copyright ConcernedApe
         </div>
         <div>
  
